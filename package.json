@@ -3,13 +3,8 @@
   "version": "1.0.0",
   "description": "mmall前端代码",
   "main": "index.js",
-  "dependencies": {},
-  "devDependencies": {
-    "css-loader": "^0.28.9",
-    "extract-text-webpack-plugin": "^1.0.1",
-    "style-loader": "^0.20.1",
-    "webpack": "^1.15.0"
-  },
+  "author": "PosyMo",
+  "license": "ISC",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,8 +12,14 @@
     "type": "git",
     "url": "git+https://github.com/PosyMo/mmall-fe.git"
   },
-  "author": "PosyMo",
-  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "css-loader": "^0.28.9",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^1.1.6",
+    "style-loader": "^0.20.1",
+    "webpack": "^1.15.0"
+  },
   "bugs": {
     "url": "https://github.com/PosyMo/mmall-fe/issues"
   },
