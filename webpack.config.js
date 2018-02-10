@@ -2,11 +2,14 @@
 * @Author: PosyMo
 * @Date:   2018-02-01 18:46:48
 * @Last Modified by:   PosyMo
-* @Last Modified time: 2018-02-09 10:09:25
+* @Last Modified time: 2018-02-10 15:54:36
 */
 var webpack = require('webpack');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+
+// 环境变量配置，dev / online
+var WEBPACK_ENV = process.env.WEBPACK_ENV || 'dev'
 
 // 获取html-webpack-plugin参数的方法
 var getHtmlConfig = function(name, title) {
@@ -30,6 +33,7 @@ var config = {
     },
     output: {
         path: './dist',
+        publicPath : '/dist',
         filename: 'js/[name].js'
     },
     externals: {
@@ -37,7 +41,8 @@ var config = {
     },
     module: {
         loaders: [
-            { test: /\.css$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader") }
+            { test: /\.css$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader") },
+            { test: /\.(gif|png|jpg|woff|svg|eot|ttf)\??.*$/, loader: 'url-loader?limit=1000&name=resource/[hash:8].[name].[ext]' },
         ]
     },
     plugins: [
@@ -53,5 +58,9 @@ var config = {
         new HtmlWebpackPlugin(getHtmlConfig('user-login', '用户登录')),
     ]
 };
+
+if ('dev' === WEBPACK_ENV) {
+    config.entry.common.push('webpack-dev-server/client?http://localhost:7000/');
+}
 
 module.exports = config;
