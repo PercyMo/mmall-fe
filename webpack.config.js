@@ -2,7 +2,7 @@
 * @Author: PosyMo
 * @Date:   2018-02-01 18:46:48
 * @Last Modified by:   PosyMo
-* @Last Modified time: 2018-02-10 15:54:36
+* @Last Modified time: 2018-02-12 10:20:41
 */
 var webpack = require('webpack');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
