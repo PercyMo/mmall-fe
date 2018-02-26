@@ -2,7 +2,7 @@
 * @Author: PosyMo
 * @Date:   2018-02-01 18:46:48
 * @Last Modified by:   PosyMo
-* @Last Modified time: 2018-02-12 10:20:41
+* @Last Modified time: 2018-02-23 09:12:52
 */
 var webpack = require('webpack');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
@@ -21,7 +21,7 @@ var getHtmlConfig = function(name, title) {
         hash: true,
         chunks: ['common', name]
     }
-}
+};
 
 // webpack config
 var config = {
@@ -35,6 +35,14 @@ var config = {
         path: './dist',
         publicPath : '/dist',
         filename: 'js/[name].js'
+    },
+    resolve: {
+        alias: {
+            'util': __dirname + '/src/util',
+            'page': __dirname + '/src/page',
+            'service': __dirname + '/src/service',
+            'image': __dirname + '/src/image'
+        }
     },
     externals: {
         'jquery': 'jQuery'
