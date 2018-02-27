@@ -1,0 +1,134 @@
+/*
+* @Author: PosyMo
+* @Date:   2018-02-26 11:48:25
+* @Last Modified by:   PosyMo
+* @Last Modified time: 2018-02-27 08:40:28
+*/
+/* css reset */
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote,
+dl, dt, dd, ul, ol, li,
+pre,
+form, fieldset, legend, button, input, textarea,
+th, td {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+button, input, select, textarea {
+    font: 14px/1.5 tahoma, arial, Microsoft YaHei, sans-serif;
+}
+h1, h2, h3, h4, h5, h6 { font-size: 100%; }
+address, cite, dfn, em, var { font-style: normal; }
+code, kbd, pre, samp, tt { font-family: "Courier New", Courier, monospace; }
+small { font-size: 12px; }
+
+ul, ol { list-style: none; }
+
+sup { vertical-align: text-top; }
+sub { vertical-align: text-bottom; }
+
+a:link {
+    color: #000;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #000;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #000;
+    text-decoration: none;
+}
+
+a:active {
+    color: #000;
+    text-decoration: none;
+}
+
+abbr[title], acronym[title] {
+    border-bottom: 1px dotted;
+    cursor: help;
+}
+
+q:before, q:after { content: ''; }
+
+legend { color: #000; }
+fieldset, img { border: 0; }
+button, input, select, textarea { font-size: 100%; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+hr {
+    border: none;
+    height: 1px;
+}
+
+html { overflow-y: scroll; }
+
+img {
+    display: block;
+    border: none;
+}
+
+/* 定宽布局 */
+.w {
+    margin: 0 auto;
+    width: 1080px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 全局通用样式 */
+/* 隐藏类 */
+.hide {
+    display: none;
+}
+/* 超链样式 */
+.link {
+    color: #999;
+    cursor: pointer;
+    text-decoration: none;
+}
+.link:hover {
+    color: #e80012;
+}
+.link-text {
+    color: #999;
+    text-decoration: none;
+}
+/* btn */
+.btn {
+    display: inline-block;
+    padding: 0 20px;
+    height: 40px;
+    color: #fff;
+    font-size: 17px;
+    font-weight: bold;
+    outline: none;
+    line-height: 40px;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    border: none;
+    background: #c60023;
+}
+.btn-mini {
+    padding: 0 10px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 12px;
+}
+/* loading */
+.loading {
+    margin: 10px auto;
+    display: block;
+    width: 65px;
+    height: 65px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: url(../../image/icon/loading.gif) no-repeat;
+    opacity: .6;
+}

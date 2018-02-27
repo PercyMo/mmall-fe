@@ -2,7 +2,7 @@
 * @Author: PosyMo
 * @Date:   2018-02-01 18:46:48
 * @Last Modified by:   PosyMo
-* @Last Modified time: 2018-02-23 09:12:52
+* @Last Modified time: 2018-02-26 16:27:44
 */
 var webpack = require('webpack');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
@@ -38,6 +38,7 @@ var config = {
     },
     resolve: {
         alias: {
+            'node_modules': __dirname + '/node_modules',
             'util': __dirname + '/src/util',
             'page': __dirname + '/src/page',
             'service': __dirname + '/src/service',

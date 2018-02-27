@@ -2,7 +2,7 @@
 * @Author: PosyMo
 * @Date:   2018-02-11 08:53:02
 * @Last Modified by:   PosyMo
-* @Last Modified time: 2018-02-25 19:35:22
+* @Last Modified time: 2018-02-26 11:22:25
 */
 'use strict';
 var Hogan = require('hogan.js');
@@ -68,11 +68,11 @@ var _util = {
         }
         // 手机号验证
         if ('phone' === type) {
-            // return //
+            return /^1\d{10}$/.test(value);
         }
         // 邮箱格式验证
         if ('email' === type) {
-
+            return /^(\w)+(\.\w+)*@(\w)+((\.\w{2,3}){1,3})$/.test(value);
         }
     },
     // 统一登录处理
