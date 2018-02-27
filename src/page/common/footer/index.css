@@ -1,0 +1,27 @@
+/*
+ * @Author: PosyMo 
+ * @Date: 2018-02-27 15:32:58 
+ * @Last Modified by: PosyMo
+ * @Last Modified time: 2018-02-27 15:42:45
+ */
+.footer {
+    margin-top: 20px;
+    padding-bottom: 10px;
+    border-top: 1px solid #e1e1e1;
+}
+.footer .links {
+    text-align: center;
+    line-height: 30px;
+}
+.footer .links .link {
+    padding: 0 5px;
+    color: #666;
+}
+.footer .links .link:hover {
+    color: #e80012;
+}
+.footer .copyright {
+    color: #999;
+    text-align: center;
+    line-height: 30px;
+}

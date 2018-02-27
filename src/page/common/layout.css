@@ -1,8 +1,8 @@
 /*
 * @Author: PosyMo
 * @Date:   2018-02-26 11:48:25
-* @Last Modified by:   PosyMo
-* @Last Modified time: 2018-02-27 08:40:28
+ * @Last Modified by: PosyMo
+ * @Last Modified time: 2018-02-27 15:23:07
 */
 /* css reset */
 body, h1, h2, h3, h4, h5, h6, hr, p, blockquote,
@@ -16,8 +16,9 @@ th, td {
 
 body,
 button, input, select, textarea {
-    font: 14px/1.5 tahoma, arial, Microsoft YaHei, sans-serif;
+    font: 12px/1.5 tahoma, arial, Microsoft YaHei, sans-serif;
 }
+body { background: #f0f3ef; }
 h1, h2, h3, h4, h5, h6 { font-size: 100%; }
 address, cite, dfn, em, var { font-style: normal; }
 code, kbd, pre, samp, tt { font-family: "Courier New", Courier, monospace; }
@@ -28,26 +29,10 @@ ul, ol { list-style: none; }
 sup { vertical-align: text-top; }
 sub { vertical-align: text-bottom; }
 
-a:link {
-    color: #000;
+a:link, a:visited, a:hover, a:active {
+    color: #999;
     text-decoration: none;
 }
-
-a:visited {
-    color: #000;
-    text-decoration: none;
-}
-
-a:hover {
-    color: #000;
-    text-decoration: none;
-}
-
-a:active {
-    color: #000;
-    text-decoration: none;
-}
-
 abbr[title], acronym[title] {
     border-bottom: 1px dotted;
     cursor: help;
@@ -131,4 +116,13 @@ img {
     border-radius: 5px;
     background: url(../../image/icon/loading.gif) no-repeat;
     opacity: .6;
+}
+/* spacer间隔线 */
+.spacer {
+    margin: 11px 5px 0;
+    width: 1px;
+    height: 10px;
+    display: inline-block;
+    overflow: hidden;
+    background: #ccc;
 }
