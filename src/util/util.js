@@ -1,8 +1,8 @@
 /*
 * @Author: PosyMo
 * @Date:   2018-02-11 08:53:02
-* @Last Modified by:   PosyMo
-* @Last Modified time: 2018-02-26 11:22:25
+ * @Last Modified by: PosyMo
+ * @Last Modified time: 2018-02-28 11:28:16
 */
 'use strict';
 var Hogan = require('hogan.js');
@@ -29,7 +29,7 @@ var _util = {
                 }
                 // 请求数据错误
                 else if (1 === res.status) {
-                    typeof param.error === 'function' && param.error(err.msg);
+                    typeof param.error === 'function' && param.error(res.msg);
                 }
             },
             error: function(err) {
@@ -77,7 +77,7 @@ var _util = {
     },
     // 统一登录处理
     doLogin: function() {
-        window.location.href = './user-login.html' + encodeURIComponent(window.location.href);
+        window.location.href = './user-login.html?redirect=' + encodeURIComponent(window.location.href);
     },
     goHome: function() {
         window.location.href = './index.html';

@@ -2,16 +2,19 @@
  * @Author: PosyMo 
  * @Date: 2018-02-26 17:24:26 
  * @Last Modified by: PosyMo
- * @Last Modified time: 2018-02-27 20:07:22
+ * @Last Modified time: 2018-02-28 11:41:56
  */
 'use strict';
 require('./index.css');
 var _util = require('util/util.js');
+var _user = require('service/user-service.js');
+var _cart = require('service/cart-service.js');
 // 导航
 var nav = {
     init: function() {
         this.bindEvent();
         this.loadUserInfo();
+        this.loadCartCount();
         return this;
     },
     bindEvent: function() {
@@ -25,12 +28,30 @@ var nav = {
         });
         // 退出点击事件
         $('.js-logout').click(function() {
-            console.log('logout');
+            _user.logout(function(res) {
+                window.location.reload();
+            }, function(errMsg) {
+                _util.errorTip(errMsg);
+            });
         });
     },
     // 加载用户信息
     loadUserInfo: function() {
-        
+        _user.checkLogin(function(res) {
+            $('.user.not-login').hide().siblings('.user.login').show()
+                .find('.username').text('res.username');
+        }, function(errMsg) {
+            // do something
+            console.log(errMsg);
+        });
+    },
+    // 加载购物车数量
+    loadCartCount: function() {
+        _cart.getCartCount(function(res) {
+            $('.nav .cart-count').text(res || 0);
+        }, function(errMsg) {
+            $('.nav .cart-count').text(0);
+        });
     }
 };
 

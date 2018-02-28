@@ -1,0 +1,39 @@
+/*
+ * @Author: PosyMo 
+ * @Date: 2018-02-28 09:57:13 
+ * @Last Modified by: PosyMo
+ * @Last Modified time: 2018-02-28 10:14:47
+ */
+ /* 通用头部导航 */
+.header .logo {
+    position: absolute;
+    left: 60px;
+    top: 34px;
+}
+.header .logo a {
+    display: block;
+    color: #c60023;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.header .search-con {
+    padding: 40px 0 30px 250px;
+}
+.header .search-con .search-input {
+    padding-left: 10px;
+    width: 550px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 15px;
+    border: 2px solid #c60023;
+    outline: none;
+}
+.header .search-con .search-btn {
+    position: absolute;
+    height: 44px;
+    width: 80px;
+    font-size: 22px;
+}
+
+/* 面包屑导航 */
