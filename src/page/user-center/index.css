@@ -1,0 +1,11 @@
+/*
+ * @Author: PosyMo 
+ * @Date: 2018-03-01 09:12:20 
+ * @Last Modified by: PosyMo
+ * @Last Modified time: 2018-03-01 09:28:37
+ */
+/* 右侧内容区 */
+.content.with-nav {
+    width: 950px;
+    float: left;
+}

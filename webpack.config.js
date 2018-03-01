@@ -1,8 +1,8 @@
 /*
 * @Author: PosyMo
 * @Date:   2018-02-01 18:46:48
-* @Last Modified by:   PosyMo
-* @Last Modified time: 2018-02-26 16:27:44
+ * @Last Modified by: PosyMo
+ * @Last Modified time: 2018-03-01 17:26:04
 */
 var webpack = require('webpack');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
@@ -29,7 +29,8 @@ var config = {
     entry: {
         'common': ['./src/page/common/index.js'],// 通用js模块
         'index': ['./src/page/index/index.js'],
-        'user-login': ['./src/page/user-login/index.js']
+        'user-login': ['./src/page/user-login/index.js'],
+        'user-center': ['./src/page/user-center/index.js'],
     },
     output: {
         path: './dist',
@@ -52,6 +53,7 @@ var config = {
         loaders: [
             { test: /\.css$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader") },
             { test: /\.(gif|png|jpg|woff|svg|eot|ttf)\??.*$/, loader: 'url-loader?limit=1000&name=resource/[hash:8].[name].[ext]' },
+            { test: /\.string$/, loader: 'html-loader' }
         ]
     },
     plugins: [
@@ -65,6 +67,7 @@ var config = {
         // html模板处理
         new HtmlWebpackPlugin(getHtmlConfig('index', '首页')),
         new HtmlWebpackPlugin(getHtmlConfig('user-login', '用户登录')),
+        new HtmlWebpackPlugin(getHtmlConfig('user-center', '个人中心')),
     ]
 };
 
