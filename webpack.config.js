@@ -2,7 +2,7 @@
 * @Author: PosyMo
 * @Date:   2018-02-01 18:46:48
  * @Last Modified by: PosyMo
- * @Last Modified time: 2018-03-01 17:26:04
+ * @Last Modified time: 2018-03-02 10:11:35
 */
 var webpack = require('webpack');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
@@ -31,6 +31,7 @@ var config = {
         'index': ['./src/page/index/index.js'],
         'user-login': ['./src/page/user-login/index.js'],
         'user-center': ['./src/page/user-center/index.js'],
+        'result': ['./src/page/result/index.js'],
     },
     output: {
         path: './dist',
@@ -68,6 +69,7 @@ var config = {
         new HtmlWebpackPlugin(getHtmlConfig('index', '首页')),
         new HtmlWebpackPlugin(getHtmlConfig('user-login', '用户登录')),
         new HtmlWebpackPlugin(getHtmlConfig('user-center', '个人中心')),
+        new HtmlWebpackPlugin(getHtmlConfig('result', '操作结果')),
     ]
 };
 

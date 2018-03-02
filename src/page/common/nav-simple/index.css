@@ -1,0 +1,17 @@
+/*
+ * @Author: PosyMo 
+ * @Date: 2018-03-02 10:02:35 
+ * @Last Modified by: PosyMo
+ * @Last Modified time: 2018-03-02 10:20:11
+ */
+ .nav-simple {
+     height: 60px;
+     line-height: 60px;
+     border-bottom: 1px solid #ddd;
+     background: #fff;
+ }
+ .nav-simple .logo {
+     color: #c60023;
+     font-size: 26px;
+     font-weight: bold;
+ }
