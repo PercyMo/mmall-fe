@@ -1,0 +1,87 @@
+/*
+ * @Author: PosyMo 
+ * @Date: 2018-03-03 17:56:33 
+ * @Last Modified by: PosyMo
+ * @Last Modified time: 2018-03-03 18:56:21
+ */
+/* 最外层容器 */
+.page-wrap {
+    padding: 40px 0;
+    background: #e72955;
+}
+/* 表单框 */
+.user-con {
+    margin: 0 auto;
+    width: 400px;
+    position: relative;
+    background: #fff;
+}
+.user-con .user-title {
+    padding: 10px 0;
+    color: #666;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+.user-con .user-box {
+    padding: 20px;
+}
+/* 错误提示框 */
+.user-con .user-box .error-item {
+    margin-bottom: 10px;
+    display: none;
+    padding: 4px 0 4px 40px;
+    position: relative;
+    color: #f00;
+    border: 1px solid #f00;
+    background: #fde9e9;
+}
+.user-con .user-box .error-icon {
+    margin-top: -7px;
+    position: absolute;
+    top: 50%;
+    left: 14px;
+    font-size: 14px;
+}
+
+.user-con .user-item {
+    margin-bottom: 20px;
+    position: relative;
+}
+.user-con .user-item .user-label {
+    width: 40px;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    bottom: 1px;
+    color: #d3d3d3;
+    font-size: 18px;
+    line-height: 36px;
+    text-align: center;
+    border-right: 1px solid #bdbdbd;
+    background: #f3f3f3;
+}
+.user-con .user-item .user-content {
+    padding: 10px 0 10px 50px;
+    width: 308px;
+    height: 18px;
+    font-size: 15px;
+    line-height: 18px;
+    outline: none;
+    border: 1px solid #bdbdbd;
+}
+.user-con .btn-submit {
+    padding: 2px 0;
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+}
+/* 跳转链接 */
+.user-con .link-item {
+    margin-top: 10px;
+    text-align: right;
+}
+.user-con .link-item .link {
+    margin-left: 10px;
+}

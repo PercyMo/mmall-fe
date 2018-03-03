@@ -2,7 +2,7 @@
 * @Author: PosyMo
 * @Date:   2018-02-26 11:48:25
  * @Last Modified by: PosyMo
- * @Last Modified time: 2018-02-27 15:23:07
+ * @Last Modified time: 2018-03-02 17:04:20
 */
 /* css reset */
 body, h1, h2, h3, h4, h5, h6, hr, p, blockquote,
@@ -29,10 +29,6 @@ ul, ol { list-style: none; }
 sup { vertical-align: text-top; }
 sub { vertical-align: text-bottom; }
 
-a:link, a:visited, a:hover, a:active {
-    color: #999;
-    text-decoration: none;
-}
 abbr[title], acronym[title] {
     border-bottom: 1px dotted;
     cursor: help;

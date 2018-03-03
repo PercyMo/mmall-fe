@@ -1,8 +1,8 @@
 /*
  * @Author: PosyMo 
- * @Date: 2018-03-02 15:56:16 
+ * @Date: 2018-03-03 17:56:43 
  * @Last Modified by: PosyMo
- * @Last Modified time: 2018-03-03 11:28:02
+ * @Last Modified time: 2018-03-03 18:41:26
  */
 'use strict';
 require('./index.css');
@@ -27,7 +27,21 @@ var page = {
     },
     bindEvent: function() {
         var _this = this
-        // 点击登录按钮
+        // 验证username
+        $('#username').blur(function() {
+            var username = $.trim($(this).val());
+            // 如果用户名为空，不做验证
+            if (!username) {
+                return;
+            }
+            // 异步验证用户名是否已经存在
+            _user.checkUsername(username, function(res) {
+                formError.hide();
+            }, function(errMsg) {
+                formError.show(errMsg);
+            });
+        });
+        // 点击注册按钮
         $('#submit').click(function() {
             _this.submit();
         });
@@ -42,14 +56,19 @@ var page = {
     submit: function() {
         var formData = {
                 username: $.trim($('#username').val()),
-                password: $.trim($('#password').val())
+                password: $.trim($('#password').val()),
+                passwordConfirm: $.trim($('#password-confirm').val()),
+                phone: $.trim($('#phone').val()),
+                email: $.trim($('#email').val()),
+                question: $.trim($('#question').val()),
+                answer: $.trim($('#answer').val())
             },
             // 表单验证结果
             validateResult = this.formValidate(formData);
             // 验证成功
             if (validateResult.status) {
-                _user.login(formData, function() {
-                    window.location.href = _util.getUrlParam('redirect') || './index.html';
+                _user.register(formData, function() {
+                    window.location.href = './result.html?type=register';
                 }, function(errMsg) {
                     formError.show(errMsg);
                 });
@@ -70,6 +89,30 @@ var page = {
         }
         if (!_util.validate(formData.password, 'require')) {
             result.msg = '密码不能为空';
+            return result;
+        }
+        if (formData.password.length < 6) {
+            result.msg = '密码长度不能小于6位';
+            return result;
+        }
+        if (formData.password !== formData.passwordConfirm) {
+            result.msg = '两次输入的密码不一致';
+            return result;
+        }
+        if (!_util.validate(formData.phone, 'phone')) {
+            result.msg = '手机号格式不正确';
+            return result;
+        }
+        if (!_util.validate(formData.email, 'email')) {
+            result.msg = '邮箱格式不正确';
+            return result;
+        }
+        if (!_util.validate(formData.question, 'require')) {
+            result.msg = '密码提示问题不能为空';
+            return result;
+        }
+        if (!_util.validate(formData.answer, 'require')) {
+            result.msg = '密码提示问题答案不能为空';
             return result;
         }
         // 通过验证，返回正确提示
