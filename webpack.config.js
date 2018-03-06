@@ -2,7 +2,7 @@
 * @Author: PosyMo
 * @Date:   2018-02-01 18:46:48
  * @Last Modified by: PosyMo
- * @Last Modified time: 2018-03-03 18:13:33
+ * @Last Modified time: 2018-03-06 16:37:14
 */
 var webpack = require('webpack');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
@@ -31,6 +31,7 @@ var config = {
         'index': ['./src/page/index/index.js'],
         'user-login': ['./src/page/user-login/index.js'],
         'user-register': ['./src/page/user-register/index.js'],
+        'user-pass-reset': ['./src/page/user-pass-reset/index.js'],
         'user-center': ['./src/page/user-center/index.js'],
         'result': ['./src/page/result/index.js'],
     },
@@ -70,6 +71,7 @@ var config = {
         new HtmlWebpackPlugin(getHtmlConfig('index', '首页')),
         new HtmlWebpackPlugin(getHtmlConfig('user-login', '用户登录')),
         new HtmlWebpackPlugin(getHtmlConfig('user-register', '用户注册')),
+        new HtmlWebpackPlugin(getHtmlConfig('user-pass-reset', '找回密码')),
         new HtmlWebpackPlugin(getHtmlConfig('user-center', '个人中心')),
         new HtmlWebpackPlugin(getHtmlConfig('result', '操作结果')),
     ]
