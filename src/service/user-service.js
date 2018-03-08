@@ -2,7 +2,7 @@
  * @Author: PosyMo 
  * @Date: 2018-02-28 10:55:09 
  * @Last Modified by: PosyMo
- * @Last Modified time: 2018-03-06 18:42:36
+ * @Last Modified time: 2018-03-08 11:05:47
  */
 'use strict';
 
@@ -77,6 +77,35 @@ var _user = {
     resetPassword: function(userInfo, resolve, reject) {
         _util.request({
             url: _util.getServerUrl('/user/forget_reset_password.do'),
+            data: userInfo,
+            method: 'POST',
+            success: resolve,
+            error: reject
+        });
+    },
+    // 获取用户信息
+    getUserInfo: function(resolve, reject) {
+        _util.request({
+            url: _util.getServerUrl('/user/get_information.do'),
+            method: 'POST',
+            success: resolve,
+            error: reject
+        });
+    },
+    // 更新个人信息
+    updateUserInfo: function(userInfo, resolve, reject) {
+        _util.request({
+            url: _util.getServerUrl('/user/update_information.do'),
+            data: userInfo,
+            method: 'POST',
+            success: resolve,
+            error: reject
+        });
+    },
+    // 登录状态下更改密码
+    updatePassword: function(userInfo, resolve, reject) {
+        _util.request({
+            url: _util.getServerUrl('/user/reset_password.do'),
             data: userInfo,
             method: 'POST',
             success: resolve,

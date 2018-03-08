@@ -2,21 +2,21 @@
  * @Author: PosyMo 
  * @Date: 2018-03-01 09:32:34 
  * @Last Modified by: PosyMo
- * @Last Modified time: 2018-03-01 10:18:26
+ * @Last Modified time: 2018-03-07 11:11:35
  */
 /* 导航主体 */
 .nav-side {
-    width: 130px;
+    width: 100px;
     min-height: 100px;
     float: left;
 }
 .nav-side .nav-item {
-    line-height: 25px;
-    font-size: 13px;
+    line-height: 30px;
 }
 .nav-side .nav-item .link {
     color: #888;
 }
 .nav-side .nav-item.active .link {
     color: #c60023;
+    font-weight: bold;
 }

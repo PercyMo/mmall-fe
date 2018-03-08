@@ -2,7 +2,7 @@
  * @Author: PosyMo 
  * @Date: 2018-02-28 09:57:13 
  * @Last Modified by: PosyMo
- * @Last Modified time: 2018-03-03 13:48:35
+ * @Last Modified time: 2018-03-06 19:32:46
  */
  /* 通用头部导航 */
 .header .logo {
@@ -38,3 +38,22 @@
 }
 
 /* 面包屑导航 */
+.crumb {
+    margin-bottom: 15px;
+    height: 44px;
+    line-height: 44px;
+    background: #eee;
+    border-top: 2px solid #c60023;
+}
+.crumb .crumb-con {
+    color: #666;
+    font-size: 0;
+}
+.crumb .crumb-con .link,
+.crumb .crumb-con .link-text {
+    font-size: 12px;
+}
+.crumb .crumb-con .spe {
+    padding: 0 10px;
+    font-size: 12px;
+}
