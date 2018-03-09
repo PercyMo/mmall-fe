@@ -1,5 +1,5 @@
 ## 前言
-商城网站前端项目
+商城网站前端项目，参照慕课实战课程的个人练习项目，学习者请至慕课网购买原版课程：[课程链接](http://coding.imooc.com/class/109.html)
 
 ### 技术栈
 jQuery + hogan + webpack
@@ -16,6 +16,7 @@ $ npm run dev
 1. webpack搭建项目脚手架
 2. ejs语法
 3. hogan模板引擎
+4. CommonJs模块化开发
 
 ## 效果演示
 ### 部分截图
