@@ -2,7 +2,7 @@
  * @Author: PosyMo 
  * @Date: 2018-03-10 16:12:57 
  * @Last Modified by: PosyMo
- * @Last Modified time: 2018-03-10 17:18:37
+ * @Last Modified time: 2018-03-12 10:26:21
  */
 /* 排序按钮 */
 .sort-con {
@@ -34,7 +34,7 @@
 .sort-con .sort-item.asc .fa-sort-desc {
     opacity: .6;
 }
-.sort-con .sort-item.desc .fa-sort-desc {
+.sort-con .sort-item.desc .fa-sort-asc {
     opacity: .6;
 }
 /* 列表 */

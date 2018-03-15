@@ -1,0 +1,41 @@
+/*
+ * @Author: PosyMo 
+ * @Date: 2018-03-14 10:11:16 
+ * @Last Modified by: PosyMo
+ * @Last Modified time: 2018-03-14 13:50:42
+ */
+.pg-content {
+    color: #333;
+    text-align: center;
+}
+.pg-content .pg-item {
+    margin: 0 2px;
+    padding: 0 15px;
+    height: 36px;
+    display: inline-block;
+    line-height: 36px;
+    border: 1px solid #ccc;
+    background: #eee;
+    cursor: pointer;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.pg-content .pg-item.disabled {
+    color: #ccc;
+    background: none;
+    cursor: auto;
+}
+.pg-content .pg-item.active {
+    color: #c60023;
+    border: none;
+    background: none;
+    cursor: auto;
+}
+.pg-content .pg-total {
+    margin-left: 20px;
+    font-weight: bold;
+    background: none;
+    cursor: auto;
+}
