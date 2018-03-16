@@ -2,7 +2,7 @@
  * @Author: PosyMo 
  * @Date: 2018-03-10 16:12:13 
  * @Last Modified by: PosyMo
- * @Last Modified time: 2018-03-15 09:42:37
+ * @Last Modified time: 2018-03-16 11:47:18
  */
 'use strict';
 require('./index.css');
@@ -20,7 +20,7 @@ var page = {
             categoryId: _util.getUrlParam('categoryId') || '',
             orderBy: _util.getUrlParam('orderBy') || 'default',
             pageNum: _util.getUrlParam('pageNum') || 1,
-            pageSize: _util.getUrlParam('pageSize') || 1
+            pageSize: _util.getUrlParam('pageSize') || 20
         }
     },
     init: function() {
