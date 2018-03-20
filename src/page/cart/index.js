@@ -2,12 +2,12 @@
  * @Author: PosyMo 
  * @Date: 2018-03-17 14:52:24 
  * @Last Modified by: PosyMo
- * @Last Modified time: 2018-03-20 18:54:49
+ * @Last Modified time: 2018-03-20 18:59:36
  */
 'use strict';
 require('./index.css');
-require('page/common/nav/index.js');
 require('page/common/header/index.js');
+var nav = require('page/common/nav/index.js');
 var _util = require('util/util.js');
 var _cart = require('service/cart-service.js');
 var templateIndex = require('./index.string');
@@ -184,6 +184,8 @@ var page = {
         this.data.cartInfo = data;
         var cartHtml = _util.renderHtml(templateIndex, data);
         $('.page-wrap').html(cartHtml);
+        // 通知导航的购物车更新数量
+        nav.loadCartCount();
     },
     // 删除指定商品，支持批量，productId用逗号分隔
     deleteCartProduct: function(productIds) {
