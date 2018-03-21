@@ -4,3 +4,68 @@
  * @Last Modified by:   PosyMo 
  * @Last Modified time: 2018-03-21 15:24:58 
  */
+ .panel {
+     margin-bottom: 10px;
+     overflow: hidden;
+ }
+ .panel-title {
+     height: 35px;
+     color: #333;
+     font-size: 15px;
+     font-weight: bold;
+     line-height: 35px;
+     border-bottom: 1px solid #ddd;
+ }
+/* 收货地址 */
+.address-item,
+.address-add {
+    margin: 20px 20px 0 0;
+    padding: 5px 8px;
+    width: 200px;
+    float: left;
+    border: 3px dashed #ccc;
+    cursor: pointer;
+}
+.address-item.actie {
+    border: 3px dashed #c60023;
+}
+.address-item:hover,
+.address-add:hover {
+    background: #eee;
+}
+.address-item .address-title {
+    height: 20px;
+    color: #666;
+    line-height: 20px;
+    overflow: hidden;
+    border-bottom: 1px solid #ddd;
+}
+.address-item .address-detail {
+    margin-top: 5px;
+    height: 40px;
+    color: #666;
+    line-height: 20px;
+    overflow: hidden;
+}
+.address-item .address-opera {
+    text-align: right;
+    visibility: hidden;
+}
+.address-item:hover .address-opera {
+    visibility: visible;
+}
+.address-item .address-opera .link {
+    margin-right: 5px;
+}
+.address-add .address-new {
+    padding: 8px 0;
+    color: #ccc;
+    text-align: center;
+}
+.address-add .address-new .fa {
+    font-size: 50px;
+    line-height: 50px;
+}
+.address-add .address-new .text {
+    font-size: 12px;
+}
