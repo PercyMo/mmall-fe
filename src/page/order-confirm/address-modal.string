@@ -42,7 +42,7 @@
                 </div>
                 <div class="form-line">
                     <label class="label" for="receiver-zip">
-                        <span class="required">*</span>邮政编号
+                        邮政编号
                     </label>
                     <input type="text" class="form-item" id="receiver-zip" placeholder="如：100000" value="{{data.receiverZip}}" />
                 </div>

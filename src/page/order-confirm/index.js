@@ -2,7 +2,7 @@
  * @Author: PosyMo 
  * @Date: 2018-03-21 15:23:17 
  * @Last Modified by: PosyMo
- * @Last Modified time: 2018-03-22 14:03:54
+ * @Last Modified time: 2018-03-23 17:08:11
  */
 'use strict';
 require('./index.css');
@@ -58,6 +58,54 @@ var page = {
                     _this.loadAddressList();
                 }
             });
+        });
+        // 编辑地址
+        $(document).on('click', '.address-update', function(e) {
+            e.stopPropagation();
+            var shippingId = $(this).parents('.address-item').data('id');
+
+            // 临时数据
+            var res = {
+                id:6328,
+                receiverName:"刘旺",
+                receiverPhone:"15154747474",
+                receiverProvince:"山东省",
+                receiverCity:"枣庄",
+                receiverAddress:"阿萨德",
+                receiverZip:"100000"
+            };
+            addressModal.show({
+                isUpdate: true,
+                data: res,
+                onSuccess: function() {
+                    _this.loadAddressList();
+                }
+            });
+            return;
+
+            _address.getAddress(shippingId, function(res) {
+                addressModal.show({
+                    isUpdate: true,
+                    data: res,
+                    onSuccess: function() {
+                        _this.loadAddressList();
+                    }
+                });
+            }, function(errMsg) {
+                _util.errorTip(errMsg);
+            });
+        });
+        // 删除地址
+        $(document).on('click', '.address-delete', function(e) {
+            e.stopPropagation();
+            var id = $(this).parents('.address-item').data('id');
+            if (window.confirm('确认要删除该地址？')) {
+                _address.deleteAddress(id, function(res) {
+                    _this.loadAddressList();
+                }, function(errMsg) {
+                    _util.errorTip(errMsg);
+                });
+            }
         });
     },
     // 加载地址信息列表

@@ -2,7 +2,7 @@
  * @Author: PosyMo 
  * @Date: 2018-03-08 09:54:10 
  * @Last Modified by: PosyMo
- * @Last Modified time: 2018-03-08 11:07:50
+ * @Last Modified time: 2018-03-23 10:26:42
  */
 'use strict';
 require('./index.css');
@@ -28,11 +28,11 @@ var page = {
         // 点击提交按钮后的动作
         $(document).on('click', '.btn-submit', function() {
             var userInfo = {
-                password: $.trim($('#password').val()),
-                passwordNew: $.trim($('#password-new').val()),
-                passwordConfirm: $.trim($('#password-confirm').val()),
-            },
-            validateResult = _this.validateForm(userInfo);
+                    password: $.trim($('#password').val()),
+                    passwordNew: $.trim($('#password-new').val()),
+                    passwordConfirm: $.trim($('#password-confirm').val()),
+                },
+                validateResult = _this.validateForm(userInfo);
             if (validateResult.status) {
                 // 更改用户密码
                 _user.updatePassword({
