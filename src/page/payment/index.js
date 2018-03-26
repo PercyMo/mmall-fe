@@ -2,7 +2,7 @@
  * @Author: PosyMo 
  * @Date: 2018-03-26 14:10:45 
  * @Last Modified by: PosyMo
- * @Last Modified time: 2018-03-26 15:05:43
+ * @Last Modified time: 2018-03-26 16:42:52
  */
 'use strict';
 require('./index.css');
@@ -27,19 +27,10 @@ var page = {
             paymentHtml = '',
             $pageWrap = $('.page-wrap')
         $pageWrap.html('<div class="loading"></div>');
-
-        // 临时数据
-        var res = {
-            "orderNo": "1522024174272",
-            "qrUrl": "http://img.happymmall.com/qr-1522024174272.png"
-        };
-        paymentHtml = _util.renderHtml(templateIndex, res);
-        $pageWrap.html(paymentHtml);
-        return;
-
         _payment.getPaymentInfo(this.data.orderNumber, function(res) {
             paymentHtml = _util.renderHtml(templateIndex, res);
             $pageWrap.html(paymentHtml);
+            // 监听订单状态
             _this.listenOrderStatus();
         }, function(errMsg) {
             $pageWrap.html('<p class="err-tip">' + errMsg + '</p>');
@@ -54,7 +45,7 @@ var page = {
                 }
             }, function(errMsg) {
             });
-        }, 2000);
+        }, 5000);
     }
 };
 

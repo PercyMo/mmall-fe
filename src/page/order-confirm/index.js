@@ -2,7 +2,7 @@
  * @Author: PosyMo 
  * @Date: 2018-03-21 15:23:17 
  * @Last Modified by: PosyMo
- * @Last Modified time: 2018-03-23 17:08:11
+ * @Last Modified time: 2018-03-26 16:42:23
  */
 'use strict';
 require('./index.css');
@@ -64,25 +64,6 @@ var page = {
             e.stopPropagation();
             var shippingId = $(this).parents('.address-item').data('id');
 
-            // 临时数据
-            var res = {
-                id:6328,
-                receiverName:"刘旺",
-                receiverPhone:"15154747474",
-                receiverProvince:"山东省",
-                receiverCity:"枣庄",
-                receiverAddress:"阿萨德",
-                receiverZip:"100000"
-            };
-            addressModal.show({
-                isUpdate: true,
-                data: res,
-                onSuccess: function() {
-                    _this.loadAddressList();
-                }
-            });
-            return;
-
             _address.getAddress(shippingId, function(res) {
                 addressModal.show({
                     isUpdate: true,
@@ -112,40 +93,6 @@ var page = {
     loadAddressList: function() {
         var _this = this;
         $('.adress-con').html('<div class="loading"></div>');
-        // 临时数据
-        var res = {
-            list: [
-                {
-                    id: 6327,
-                    receiverName: "王磊",
-                    receiverPhone: "15154758475",
-                    receiverProvince: "辽宁省",
-                    receiverCity: "抚顺",
-                    receiverAddress: "阿萨德",
-                },
-                {
-                    id: 6328,
-                    receiverName: "刘旺",
-                    receiverPhone: "15154747474",
-                    receiverProvince: "山东省",
-                    receiverCity: "枣庄",
-                    receiverAddress: "阿萨德",
-                },
-                {
-                    id: 6330,
-                    receiverName: "张明明",
-                    receiverPhone: "15154745874",
-                    receiverProvince: "山西省",
-                    receiverCity: "吕梁",
-                    receiverAddress: "阿萨德",
-                }
-            ]
-        };
-        _this.addressFilter(res);
-        var addressListHtml = _util.renderHtml(templateAddress, res);
-        $('.adress-con').html(addressListHtml);
-        return;
-
         _address.getAddressList(function(res) {
             _this.addressFilter(res);
             var addressListHtml = _util.renderHtml(templateAddress, res);
@@ -174,33 +121,6 @@ var page = {
     loadProductList: function() {
         var _this = this;
         $('.product-con').html('<div class="loading"></div>');
-        // 临时数据
-        var res = {
-            orderItemVoList:[
-                {
-                    productId:26,
-                    productName:"【测试学习使用】Apple iPhone 7 Plus (A1661) 128G手机",
-                    productImage:"241997c4-9e62-4824-b7f0-7425c3c28917.jpeg",
-                    currentUnitPrice:6997,
-                    quantity:2,
-                    totalPrice:13994,
-                },
-                {
-                    productId:40,
-                    productName:"【测试学习使用】aiben C-201四级听力耳机 调频无线收音机调频耳机 办公配件",
-                    productImage:"2bd2abc8-1c19-483f-8dbf-e741831f73ed.jpg",
-                    currentUnitPrice:38,
-                    quantity:3,
-                    totalPrice:114,
-                }
-            ],
-            productTotalPrice:14108,
-            imageHost:"http://img.happymmall.com/"
-        };
-        var productListHtml = _util.renderHtml(templateProduct, res);
-        $('.product-con').html(productListHtml);
-        return;
-
         _order.getProductList(function(res) {
             var productListHtml = _util.renderHtml(templateProduct, res);
             $('.product-con').html(productListHtml);

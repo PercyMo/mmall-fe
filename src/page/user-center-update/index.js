@@ -2,7 +2,7 @@
  * @Author: PosyMo 
  * @Date: 2018-03-07 14:19:20 
  * @Last Modified by: PosyMo
- * @Last Modified time: 2018-03-07 15:10:01
+ * @Last Modified time: 2018-03-26 16:43:12
  */
 'use strict';
 require('./index.css');
@@ -53,22 +53,12 @@ var page = {
     // 加载用户信息
     loadUserInfo: function() {
         var userHtml = '';
-        // _user.getUserInfo(function(res) {
-            
-            // 临时数据
-            var res = {
-                answer: "猫",
-                email: "1213374871@qq.com",
-                phone: '13280112906',
-                question: "我是",
-                username: "maobangxin",
-            };
-
+        _user.getUserInfo(function(res) {
             userHtml = _util.renderHtml(templateIndex, res);
             $('.panel-body').html(userHtml);
-        // }, function(errMsg) {
-        //     _util.errorTip(errMsg);
-        // });
+        }, function(errMsg) {
+            _util.errorTip(errMsg);
+        });
     },
     validateForm: function(formData) {
         var result = {
