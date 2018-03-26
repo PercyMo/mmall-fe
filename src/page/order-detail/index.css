@@ -1,0 +1,89 @@
+/*
+ * @Author: PosyMo 
+ * @Date: 2018-03-26 08:51:42 
+ * @Last Modified by: PosyMo
+ * @Last Modified time: 2018-03-26 09:58:52
+ */
+ /* 右侧内容区 */
+.content.with-nav {
+    padding: 10px;
+    width: 960px;
+    float: left;
+    background: #fff;
+}
+.content.with-nav .panel-title {
+    padding: 10px;
+    color: #666;
+    font-size: 15px;
+    font-weight: bold;
+    border-bottom: 1px solid #eee;
+}
+.content.with-nav .panel-body {
+    padding-top: 10px;
+}
+/* 订单信息 */
+.order-info .text-line {
+    height: 30px;
+    line-height: 30px;
+}
+.order-info .text-line .text {
+    margin-right: 30px;
+}
+.order-info .btn {
+    margin-right: 10px;
+    padding: 0;
+    width: 80px;
+    height: 30px;
+    font-size: 12px;
+    line-height: 30px;
+    text-align: center;
+}
+/* 商品清单 */
+.product-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.product-table .cell-th {
+    background: #eee;
+}
+.product-table .cell {
+    border-bottom: 1px dashed #eee;
+    background: #fafafa;
+}
+.product-table .cell-img {
+    padding: 10px;
+    width: 10%;
+    text-align: center;
+}
+.product-table .cell-img .p-img {
+    width: 80px;
+    height: 80px;
+    border: 1px solid #ddd;
+}
+.product-table .cell-info {
+    width: 45%;
+    text-align: left;
+}
+.product-table .cell-price {
+    width: 15%;
+    text-align: center;
+}
+.product-table .cell-count {
+    width: 15%;
+    text-align: center;
+}
+.product-table .cell-total {
+    width: 15%;
+}
+/* 总价 */
+.total {
+    margin: 10px 20px 0 0;
+    height: 40px;
+    font-size: 14px;
+    text-align: right;
+    line-height: 40px;
+}
+.total .total-price {
+    color: #c60023;
+    font-weight: bold;
+}

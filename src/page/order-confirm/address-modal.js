@@ -2,7 +2,7 @@
  * @Author: PosyMo 
  * @Date: 2018-03-22 11:49:26 
  * @Last Modified by: PosyMo
- * @Last Modified time: 2018-03-23 17:01:04
+ * @Last Modified time: 2018-03-24 11:17:47
  */
 'use strict';
 var _util = require('util/util.js');
@@ -29,9 +29,20 @@ var addressModal = {
         this.$modalWrap.find('.address-btn').click(function() {
             var receiverInfo = _this.getReceiverInfo(),
                 isUpdate = _this.option.isUpdate;
+            // 使用新地址并且通过验证
             if (!isUpdate && receiverInfo.status) {
                 _address.save(receiverInfo.data, function(res) {
                     _util.successTip('地址添加成功');
+                    _this.hide();
+                    typeof _this.option.onSuccess === 'function'
+                    && _this.option.onSuccess(res);
+                }, function(errMsg) {
+                    _util.errorTip(errMsg);
+                });
+            } else if (isUpdate && receiverInfo.status) {
+                // 更新收件人并且通过验证
+                _address.update(receiverInfo.data, function(res) {
+                    _util.successTip('地址修改成功');
                     _this.hide();
                     typeof _this.option.onSuccess === 'function'
                     && _this.option.onSuccess(res);

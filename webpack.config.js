@@ -2,7 +2,7 @@
 * @Author: PosyMo
 * @Date:   2018-02-01 18:46:48
  * @Last Modified by: PosyMo
- * @Last Modified time: 2018-03-21 15:29:45
+ * @Last Modified time: 2018-03-26 08:50:06
 */
 var webpack = require('webpack');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
@@ -33,6 +33,8 @@ var config = {
         'detail': ['./src/page/detail/index.js'],
         'cart': ['./src/page/cart/index.js'],
         'order-confirm': ['./src/page/order-confirm/index.js'],
+        'order-list': ['./src/page/order-list/index.js'],
+        'order-detail': ['./src/page/order-detail/index.js'],
         'user-login': ['./src/page/user-login/index.js'],
         'user-register': ['./src/page/user-register/index.js'],
         'user-pass-reset': ['./src/page/user-pass-reset/index.js'],
@@ -79,6 +81,8 @@ var config = {
         new HtmlWebpackPlugin(getHtmlConfig('detail', '商品详情页')),
         new HtmlWebpackPlugin(getHtmlConfig('cart', '购物车')),
         new HtmlWebpackPlugin(getHtmlConfig('order-confirm', '确认订单')),
+        new HtmlWebpackPlugin(getHtmlConfig('order-list', '我的订单')),
+        new HtmlWebpackPlugin(getHtmlConfig('order-detail', '订单信息')),
         new HtmlWebpackPlugin(getHtmlConfig('user-login', '用户登录')),
         new HtmlWebpackPlugin(getHtmlConfig('user-register', '用户注册')),
         new HtmlWebpackPlugin(getHtmlConfig('user-pass-reset', '找回密码')),

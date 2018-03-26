@@ -14,7 +14,7 @@
             </a>
         </th>
         <th class="cell-info">
-            <a class="link" href="./detail.html?productId={{productId}}">{{productName}}</a>
+            <a class="link" href="./detail.html?productId={{productId}}"  target="_blank">{{productName}}</a>
         </th>
         <th class="cell-price">￥{{currentUnitPrice}}</th>
         <th class="cell-count">{{quantity}}</th>
