@@ -19,7 +19,7 @@ $ npm run dev
 4. CommonJs模块化开发
 
 ## 效果演示
-### 部分截图
+<img src="https://github.com/PosyMo/mmall-fe/blob/master/screenshots/effect.gif" width="800" height="380"/>
 ## 项目布局
 ```
 .
