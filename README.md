@@ -20,6 +20,7 @@ $ npm run dev
 
 ## 效果演示
 <img src="https://github.com/PosyMo/mmall-fe/blob/master/screenshots/effect.gif" width="800" height="380"/>
+
 ## 项目布局
 ```
 .
